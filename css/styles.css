@@ -1,0 +1,75 @@
+main{
+    background-image: url(../images/element-16.png);
+    width: 768px;
+    height: 1034px;
+    position:relative;
+}
+img:nth-child(1){
+    transform: scale(0.45);
+    position:absolute;
+    bottom: -100px;
+    left: -400px;
+}
+img:nth-child(2){
+    transform: scale(0.5);
+    position:absolute; 
+    right: -70px;
+    top: -150px;
+}
+img:nth-child(3){
+    transform: rotate(90deg) scale(0.5);
+    position:absolute; 
+    left: -150px;
+    top: -190px;
+}
+
+img:nth-child(4){
+    transform: scale(0.7);
+    position:relative;
+    bottom: 30px;
+}
+h2{
+    position: absolute;
+    bottom: 130px;
+    right: 10%;
+    font-size: 4em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(82, 128, 255);
+    margin:0;
+}
+main{
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+div:hover main {
+  transform: rotateY(180deg);
+}
+article, footer{
+    backface-visibility: hidden;
+}
+footer{
+    transform: rotateY(180deg);
+}
+footer{
+    position:absolute;
+    right: 25%;
+    top:35%
+}
+
+@keyframes snaigiuAnimation{
+    0%{top:0px}
+    25%{top:250px}
+    50%{top:500px}
+    100%{top:600px}
+}
+
+.snaiges{
+    animation-name: snaigiuAnimation;
+    animation-duration: 2s;
+    top:0;
+    animation-iteration-count: infinite;
+    position: absolute;
+}
+.snaiges:nth-child(6){
+    right: 0;
+}
